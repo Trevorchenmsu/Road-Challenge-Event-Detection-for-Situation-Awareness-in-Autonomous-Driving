@@ -1,0 +1,15 @@
+challenge website:
+https://sites.google.com/view/roadchallangeiccv2021/challenge?authuser=0
+
+dataset:
+https://github.com/gurkirt/road-dataset
+
+baseline code:
+https://github.com/gurkirt/3D-RetinaNet
+
+relevant papers:
+https://arxiv.org/abs/1611.08563
+
+
+Deep Learning for Detecting Multiple
+Space-Time Action Tubes in Videos
