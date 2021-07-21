@@ -1,0 +1,37 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 
+python main.py 
+
+/home/user/ , 读取data的文件夹路径
+/home/user/  ， 存储checkpoint的路径
+/home/user/kinetics-pt/ ，kinetics pretrained模型的路径
+
+--MODE=train， 有4种模式：train, gen_dets, eval_frames, eval_tubes，默认为train
+--ARCH=resnet50 ，backbone架构，支持：resnet18/34/50/101/152，默认为resnet50
+--MODEL_TYPE=I3D ，模型类型，默认为I3D，有C2D和I3D两种模型
+--ANCHOR_TYPE=RETINA，anchor类型，默认为retina，这一行可以不输入
+--DATASET=ucf24 ，选定数据集，有ucf24和ROAD两个数据集。默认为road。
+--TRAIN_SUBSETS=train ，训练集的子集，默认为train_3
+--VAL_SUBSETS=val ，验证集的子集，默认为空
+
+--MIN_SEQ_STEP，序列中连续两帧的最小gap difference，默认1，可以不输入
+--MAX_SEQ_STEP，序列中连续两帧的最大gap difference，默认1，可以不输入
+
+--SEQ_LEN=8 ，train时的输入帧数，默认8帧
+--TEST_SEQ_LEN=8 ， test时的输入帧数，默认8帧
+--BATCH_SIZE=4 ，训练时的batch size，默认为4
+--TEST_BATCH_SIZE， 测试时的batch size，默认为1，可以不输入
+--LR=0.00245 ， learning rate，默认0.004225
+--MILESTONES=6,8 
+--MAX_EPOCHS=10，训练时的最大epochs
+
+--OPTIM，优化器类型，默认SGD
+--RESUME，重启动，默认从第0个epchos重启
+--MOMENTUM，动量优化，默认0.9
+--MILESTONES 默认为20，25，用来优化学习率的，作用是？
+--GAMMA， SGD种的gamma参数，默认为0.1
+--WEIGHT_DECAY， SGD种的权重衰减参数，默认1e-4
+
+--POSTIVE_THRESHOLD，损失函数的最大matching threshold，默认为0.5
+--NEGTIVE_THRESHOLD ， 损失函数的最小matching threshold，默认为0.5
+
+--MULTI_GPUS，默认为true，采用多个GPU

@@ -1,0 +1,7 @@
+step 1: set up google colab, enter home folder
+step 2: download road dataset
+step 3: downloads pre-trained weights
+step 4: install dependencies: Pytorch, torchvision, tensorboardX
+step 5: download baseline model: 3D-RetinaNet
+step 6: evaluation with pre-trained model
+step 7: training
